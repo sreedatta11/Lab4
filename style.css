@@ -1,0 +1,152 @@
+body {
+  justify-content: center;
+  align-items: center;
+  height: 250vh;
+  margin: 0;
+  font-size: 100%;
+  background: lightgray;
+  background: darkgray;
+}
+
+.search{
+ display: flex;
+ align-items: center; 
+ justify-content: right;
+ background:black;
+ color: white;
+}
+
+button {
+    margin: 1em;
+    border-radius: 50%;
+    border: none;
+    height: 44px;
+    width: 44px;
+    outline: none;
+    background:black;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+input.search-bar {
+    background: #7c7c7c2b;
+    border: 2px solid black;
+    outline: none;
+    padding: 0.4em 1em;
+    color: white;
+    font-family: inherit;
+    font-size: 100%;
+    width: calc(100% - 100px);
+}
+
+.weather_today
+{
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+}
+
+button:hover {
+    background: #7c7c7c6b;
+}
+
+.geolocation
+{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.location-btn{
+  height: 25px;
+  width: 25px;
+}
+
+.locationbtn{
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 200px;
+  border-radius: 5px;
+  background: white;
+  color: white;
+}
+
+.input-part button:hover{
+  background: #1d9ffc;
+}
+
+.description {
+  text-transform: capitalize;
+  margin-left: 8px;
+
+}
+
+.icon{
+  max-width: 30%;
+}
+
+.weather_forecast{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+  grid-gap: 20px;
+  text-align: center;
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-top: 50px;
+}
+
+.weather_forecast_icon{
+  max-width: 50%;
+}
+
+.weather_forecast_item{
+  background: cadetblue;  
+  color: black;
+  max-width: 100%;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+.weather_forecast_sunrise,
+.weather_forecast_sunset {
+  text-align: center;
+  margin-top: 5px;
+}
+
+@media all and (max-width: 600px) and (min-width: 320px) {
+  body {
+    
+  }
+
+  .weather_forecast_item {
+    background: cadetblue;
+    color: black;
+    max-width: 80%;
+    font-size: 30%;
+  }
+
+  .innerflex {
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .sunrise-icon,
+  .sunset-icon {
+    margin: 0 0%; 
+    max-width: 50%; 
+  }
+}
